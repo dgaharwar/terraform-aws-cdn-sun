@@ -2,7 +2,7 @@
 variable "default_cache_behavior" {
   description = "The default cache behavior for this distribution"
   type        = any
-#  default     = ""
+  default     = ""
 
 }
 variable "geo_restriction" {
