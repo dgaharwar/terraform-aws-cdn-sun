@@ -146,11 +146,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     iterator = i
 
     content {
-      target_origin_id       = i.value["target_origin_id"]
-      viewer_protocol_policy = i.value["viewer_protocol_policy"]
+#       target_origin_id       = i.value["target_origin_id"]
+#        viewer_protocol_policy = i.value["viewer_protocol_policy"]
 
-      allowed_methods           = lookup(i.value, "allowed_methods", ["GET", "HEAD", "OPTIONS"])
-      cached_methods            = lookup(i.value, "cached_methods", ["GET", "HEAD"])
+#      allowed_methods           = lookup(i.value, "allowed_methods", ["GET", "HEAD", "OPTIONS"])
+#      cached_methods            = lookup(i.value, "cached_methods", ["GET", "HEAD"])
       compress                  = lookup(i.value, "compress", null)
       field_level_encryption_id = lookup(i.value, "field_level_encryption_id", null)
       smooth_streaming          = lookup(i.value, "smooth_streaming", null)
