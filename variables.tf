@@ -183,20 +183,13 @@ variable "web_acl_id" {
 
 ## Provider Configurations
 
-variable "aws_region" {
-  type        = string
-  default     = "ap-southeast-1"
-  sensitive   = true
+variable "region" {
 }
 
-variable "aws_access_key" {
-  type        = string
-
+variable "access_key" {
 }
 
-variable "aws_secret_key" {
-  type        = string
-
+variable "secret_key" {
 }
 
 
