@@ -1,0 +1,19 @@
+trigger: none
+
+resources:
+  containers:
+    - container: aws-iac-terraform-image
+      endpoint: PTSG3COCACR-SvcCon
+      image: ptsg3cocacr.azurecr.io/aws-iac-terraform-image:1.6.6
+container: aws-iac-terraform-image
+
+pool: AWSLandingZonePool
+
+steps:
+  - script: |
+      terraform --version
+      terraform fmt
+      terraform init
+      terraform validate
+      terraform test
+    displayName: "Terraform test"
